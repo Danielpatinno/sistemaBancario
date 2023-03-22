@@ -295,7 +295,7 @@ button#voltSacar{
 }
 
 button#botaoSacar:hover {
-    background-color: green;
+    background-color: red;
 }
 
 /* Tela Depositi */
