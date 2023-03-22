@@ -4,9 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Banco Patda</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <h1>Banco Patda </h1>
+        
+    </header>
+    <!-- Main principal do Banco -->
+    <main id="telaBanco">
+        <div id="img">
+          <img src="img/bank-icon-5.png" alt="simboloBanco">  
+        </div>
+
+        <!-- Tela de Bem Vindas -->
+        <div id="telaPrincipal">
+            <h1>Sejá Bem Vindo</h1>
+            <p>Escolha o tipo de acesso</p>
+            <button class="opção" id="btnGerente">Gerente</button>
+            <button class="opção" id="btnUsuario">Usuário</button>
+        </div>
+
+        <!-- Acessar como Gerente -->
+        <div id="acessoGerente">
+            <h1>Olá Gerente</h1>
+            <p>Dígite a chave de acesso</p>
+            <div>
+                <label>Chave de Acesso</label><br>
+                <input type="password" name="acesso" id="acesso">   
+            </div>
+            <button class="opção" id="entrar">Entrar</button><br>
+            <button class="volt" id="voltGer"><img src="img/img_72443.png" id="imgVolt"></button>
+        </div>
+
+        <!-- Tela do Gerente -->
+        <div id="telaGerente">
+            <h1>Sejá Bem Vindo</h1>
+            <p>Escolha uma Opção</p>
+            <button id="btnListaUsuario" class="opção">Lista de Usuarios</button><br>
+            <button id="btnTelaCadastro" class="opção">Criar usuário</button><br>
+            <button id="btnTelaDeletar" class="opção">Deletar Usuario</button><br>
+            <button id="voltGerente"><img src="img/img_72443.png" id="imgVolt"></button>
+        </div>
+
+        <!-- Lista de Usuarios -->
+        <div id="listaUsuarios">
+            <h2>Lista de Usuarios</h2>
+            <div id="telaLista">
+                <!-- Aqui adicionamos usando JS -->
+            </div>
+            <button id="voltLista"><img src="img/img_72443.png" id="imgVolt"></button>
+        </div>
+
+        <!-- Tela de Criar um novo Usuário -->
+        <div id="telaCadastro">
+            <form id="formUser">
+                <h1>Novo Usuario</h1>
+
+                <label>Nome</label><br>
+                    <input type="text" id="nameN" class="inputForm" placeholder="Digite seu nome"><br>
+                <label>RG/CPF:</label><br>
+                    <input type="number" id="idN" class="inputForm"  placeholder="RG/CPF"><br>
+                <label>Data de Nascimento:</label><br>
+                    <input type="date" id="birthdayN" class="inputForm"><br>
+                <label>Rua:</label><br>
+                    <input type="text" id="streetN" class="inputForm" placeholder="Nome da Rua"><br>
+                <label>Número:</label><br>
+                    <input type="number" id="numberHouseN" class="inputForm" placeholder="Número"><br>
+                <label>CEP:</label><br>
+                    <input type="number"  id="zipN" class="inputForm" placeholder="CEP"><br>                           
+                 
+                
+            </form>
+                <button class="form" id="botCriar">Cadastrar</button><br>
+                <button id="voltCriar"><img src="img/img_72443.png" id="imgVolt"></button>     
+        </div>
+
+        <div id="telaDeletar">
+            <div id="resDelet">
+        
+            </div>
+            <button id="voltTelaDelet"><img src="img/img_72443.png" id="imgVolt"></button>
+        </div>
+
+        <!-- Parte do Usuario -->
+        <div id="acessoUsuario">
+            <p><strong>Insira seus dados</strong></p>
+            <label>Nome:</label>
+            <input type="text" name="nameClient" id="nameClient"> <br>
+            <label>Senha:</label>    
+            <input type="password" name="passwordClient" id="passwordClient"><br>  
+            <button class="opção" id="botAcessar" >Acessar</button>
+            <div id="resClient">
+
+            </div><br>
+            <button id="voltCadastro"><img src="img/img_72443.png" id="imgVolt"></button> 
+        </div>
+
+        <!-- Tela de Operações do Usuario -->
+        <div id="telaOpções">
+            <h2>Escolha operação desejada</h2>
+            <button class="opção" id="botaoSaque">SAQUE</button><br>
+            <button class="opção" id="botaoDeposito">DEPÓSITO</button><br>
+            <button class="opção" id="botaoExtrato">EXTRATO</button><br>
     
+            <button id="voltOpçoes"><img src="img/img_72443.png" id="imgVolt"></button>
+        </div>    
+
+        <div id="telaDeposito">
+            <label >Valor de Depósito</label><br>
+            <input type="number" id="valorDeposito" placeholder="Valor Aqui"><br>
+            <button id="botaoDepositar">Depositar</button>
+            <button id="voltDeposito"><img src="img/img_72443.png" id="imgVolt"></button>
+            <div id="resDeposito"> 
+
+            </div>
+        </div>
+
+        <div id="telaSaque">
+            <label >Valor de Saque</label><br>
+            <input type="number" id="valorSaque" placeholder="Valor Aqui"><br>
+            <button id="botaoSacar">Sacar</button>
+            <button id="voltSacar"><img src="img/img_72443.png" id="imgVolt"></button>
+            <div id="resSaque"> 
+
+            </div>
+        </div>
+
+        <!-- Tela de Extrato -->
+        <div id="telaExtrato" >
+            <p>Extrato</p>
+            <div id="telaExtrato2">
+                
+            </div>
+            <button id="voltExtrato"><img src="img/img_72443.png" id="imgVolt"></button>
+        </div>
+        
+    </main>
+    
+
+
+
+    <script src="js/banc.js"></script>
 </body>
 </html>

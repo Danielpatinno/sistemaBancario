@@ -1,0 +1,349 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+/* https://www.altonivel.com.mx/wp-content/uploads/2020/06/banco-mundial.jpg */
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://levante.org.br/wp-content/uploads/2021/02/Banco-Central-determina-fechamento-das-atividades-do-Banco-Neon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+
+header {
+    color: white;
+    background-color: rgba(14, 15, 14, 0.527);
+    margin-bottom: 40px;
+}
+
+main {
+    color: white;
+    background-color: rgba(94, 97, 95, 0.813);
+    width: 500px;
+    height: 625px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+main > div {
+    position: relative;
+    margin: auto;
+    display: flex ;
+    right: 70px;
+    flex-direction: column;
+}
+
+div > h1,p,button {
+    gap: 3rem;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    transition: .5s;
+    border-radius: 10px ;
+    cursor: pointer;
+}
+
+input{
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+button:hover {
+    color: white;
+    background-color: rgba(144, 135, 135, 0.644);
+    transform: scale(1.1);
+}
+
+              /* Imagen do Icone de banco */
+div#img {
+    right: 0px;
+    left: 0%;
+    top: 10%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+
+#imgVolt{
+    height: 18px;
+    width: 25px;
+}
+
+                 /* Tela Principal */
+div#telaPrincipal{
+    display: block;
+    position: relative;
+    left: 0px;
+    top: -30px;
+}
+
+                /* Tela onde pede o acesso do Gerente */
+div#acessoGerente {
+    position: relative;
+    display:none;
+    left: 0px;
+    top: -30px;
+}
+
+button.opção{
+    width: 180px;
+}
+
+button#voltGer{
+    position: absolute;
+    top: -170px;
+    left: -145px;
+}
+
+                /* Tela de Opções do Gerente */
+div#telaGerente {
+    display:none;
+    position: relative;
+    top: -50px;
+    right: -5px;
+}
+
+button#voltGerente {
+    position: absolute;
+    top: -120px;
+    left: -120px;
+}
+
+                                /* Tela da Lista de Usuarios */
+div#listaUsuarios {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    display: none;
+    text-align: center;
+    top: -70px;
+    right:125px;
+}
+
+div#listaUsuarios > h2 {
+    position: absolute;
+    left: 90px;
+    width: 400px;
+    margin-top: -20px;
+}
+
+.usuarios {
+    margin-top: 5px;
+    position: relative;
+    background-color: rgba(102, 19, 19, 0.183);
+    text-align: left;
+    width: 400px;
+    padding: 5px;
+    left: 70px;
+    border: 1px solid black;
+}
+
+button#voltLista{
+    position: absolute;
+    top: -101px;
+    left: 19px;
+
+}
+
+                        /* Tela de Cadastro de Usuarios */
+div#telaCadastro {
+    display: none;
+    position: relative;
+    right: -10px;
+    width: 350px;
+}
+
+
+button.form {
+    position: absolute;
+    display: flex;
+    top: 390px;
+    left: 120px;
+    padding: 10px;
+}
+
+input.inputForm{
+    background-color: rgba(241, 232, 232, 0.863);
+    margin-bottom: 1px;
+}
+
+input[type="date"] {
+    width: 160px;
+}
+
+#formUser > label {
+    position: absolute;
+    left: 90px;
+    margin: 2px;
+}
+
+button#voltCriar{
+    position: absolute;
+    top: -118px;
+    left: -91px;
+}
+
+/* Tela Deletar */
+div#telaDeletar{
+    position: relative;
+    display: none;
+    text-align: left;
+    top: -50px;
+}
+
+.usuarios2 {
+    position: relative;
+    display: inline-flex;
+    background-color: rgba(102, 19, 19, 0.183);
+    width: 400px;
+    padding: 5px;
+    border: 1px solid black;
+    left: 110px;
+}
+
+.btnLixo {
+    height: 18px;
+    width: 25px;
+    position: absolute;
+    right: 23px;
+    cursor: pointer;
+    text-align: right;
+}
+
+button#voltTelaDelet{
+    position: absolute;
+    top: -226px;
+    left: 64px;
+}
+
+/* Aqui começa a estilização da parte do Usuario */
+div#acessoUsuario{
+    display: none;
+    position: relative;
+    top: -50px;
+    right: 10px;
+}
+
+button#voltCadastro{
+    position: absolute;
+    top: -160px;
+    left: -130px;
+}
+
+button#botAcessar {
+    margin-top: 30px;
+}
+
+div#resClient{
+    position: absolute;
+    top: 140px;
+    left: 65px;
+    font-size: 0.8em;
+}
+
+/* Opções Cliente */
+div#telaOpções {
+    display: none;
+    position: relative;
+    left: 4px;
+    top: -40px;
+}
+
+button#botaoSaque:hover {
+    background-color: rgba(255, 0, 0, 0.721);
+}
+
+button#botaoDeposito:hover {
+    background-color: rgba(0, 128, 0, 0.708);
+}
+
+button#voltOpçoes{
+    position: absolute;
+    top: -175px;
+    left: -100px;
+}
+
+/* Tela Saque */
+div#telaSaque {
+    display: none;
+    position: relative;
+    top: -100px;
+    left: 5px;
+}
+
+div#resSaque {
+    position: absolute;
+    width: 500px;
+    left: -160px;
+}
+
+button#voltSacar{
+    position: absolute;
+    top: -160px;
+    left: -170px;
+    margin-bottom: 15px;
+}
+
+button#botaoSacar:hover {
+    background-color: green;
+}
+
+/* Tela Depositi */
+div#telaDeposito {
+    display: none;
+    position: relative;
+    top: -100px;
+    left: 5px;
+}
+
+div#resDeposito {
+    position: absolute;
+    width: 500px;
+    left: -160px;
+}
+
+button#voltDeposito{
+    position: absolute;
+    top: -160px;
+    left: -170px;
+    margin-bottom: 15px;
+}
+
+button#botaoDepositar:hover {
+    background-color: green;
+}
+
+/* Tela Extrato */
+div#telaExtrato {
+    left: 4px;
+    display: none;
+    position: relative;
+    top: -70px;
+}
+
+div#telaExtrato2{
+    margin-top: 5px;
+    border: 1px solid black;
+    height: 150px;
+    width: 400px;
+    text-align: left;
+    padding:10px;
+}
+
+button#voltExtrato {
+    position: absolute;
+    top:-135px;
+    left: -50px;
+}
+
+
+
