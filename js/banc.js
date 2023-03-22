@@ -84,10 +84,12 @@ class usuario {
     hotaAtual(){
         var hora = new Date()
         var minutos = hora.getMinutes();
-        if(minutos < 10 ){
+        if(hora.getHours() < 10){
+            hora = `0${hora.getHours()}`
+        }else if(minutos < 10 ){
             minutos = `0${hora.getMinutes()}`
         }
-        return `${hora.getHours()}:${minutos}`
+        return `${hora}:${minutos}`
     }
 
     Extrato(){
@@ -325,6 +327,8 @@ botaoSacar.addEventListener("click",() => {
     let saldoAtual = users[senhaUsuario.value].balanceCurrent;
     if(!valorSaque.value.length){
         resSaque.innerHTML = "Dígite o valor de saque"
+    } else if(valorSaque.value < 50){
+        resSaque.innerHTML = `Valor mínimo de saque é ${Number("50").toLocaleString('pt-br',{style: 'currency',     currency: 'BRL'})}`
     } else if(valorSaque.value > saldoAtual){
         resSaque.innerHTML = "Saldo insuficiente";
         valorSaque.value = "";
@@ -363,6 +367,8 @@ botaoDepositar.addEventListener("click",() => {
     let saldoAtual = users[senhaUsuario.value].balanceCurrent;
     if(!valorDeposito.value.length){
         resDeposito.innerHTML = "Dígite o valor de depósito"
+    }else if(valorDeposito.value < 50){
+        resDeposito.innerHTML = `Valor minimo de depósito é ${Number("50").toLocaleString('pt-br',{style: 'currency',     currency: 'BRL'})}`
     } else {
         var saldo = Number(saldoAtual) + Number(valorDeposito.value)
         users[senhaUsuario.value].balanceCurrent = saldo;
@@ -403,7 +409,31 @@ voltExtrato.addEventListener("click",() => {
 
 
 
-// function kk(){
-//     telaExtrato2.style.display = "block";
-//     telaExtrato2.innerHTML += user1.Extrato() 
-// }
+function kk(){
+    const resDelet = document.getElementById("resDelet")
+    resDelet.innerHTML = "";
+users.map((el,i) => {
+
+const del = document.createElement("div");
+del.setAttribute("class", "usuarios2")
+del.innerHTML = `${el.pegarNome()}`            
+
+const btnDel = document.createElement("img")
+btnDel.setAttribute("src","./img/lixo.png")
+btnDel.setAttribute("class","btnLixo")   
+
+del.appendChild(btnDel)
+resDelet.appendChild(del)
+
+btnDel.addEventListener("click", (evt) =>{
+    if(confirm("Deseja eliminar o usuário "+ el.pegarNome()+ " ?")){
+        resDelet.removeChild(evt.target.parentNode)
+            users.splice(i,1)
+                console.log(users)
+    }
+
+})
+})  
+}
+
+kk()

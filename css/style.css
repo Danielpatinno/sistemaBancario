@@ -198,6 +198,7 @@ div#telaDeletar{
     display: none;
     text-align: left;
     top: -50px;
+    height: 300px;
 }
 
 .usuarios2 {
@@ -221,7 +222,7 @@ div#telaDeletar{
 
 button#voltTelaDelet{
     position: absolute;
-    top: -226px;
+    top: -120px;
     left: 64px;
 }
 
